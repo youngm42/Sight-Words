@@ -41,9 +41,18 @@ class ViewController: UIViewController {
                 checkBox1.image = UIImage(named: "pinkCheckedBox")
             case 2:
                 checkBox2.image = UIImage(named: "pinkCheckedBox")
+            case 3:
+                checkBox3.image = UIImage(named: "pinkCheckedBox")
+            case 4:
+                checkBox4.image = UIImage(named: "pinkCheckedBox")
+            case 5:
+                checkBox5.image = UIImage(named: "pinkCheckedBox")
             default:
                 print("hooray!")
             }
+        } else {
+            // highlight correct answer and replay cue
+            // have separate audio for prompted answer vs unprompted (i.e., dependent on whether a check is earned)?
         }
     }
 }
