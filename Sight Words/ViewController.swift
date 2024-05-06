@@ -15,11 +15,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for button in wordButtons {
+            button.backgroundColor = UIColor.purple
+            button.tintColor = UIColor.white
+            button.layer.cornerRadius = 10
+            
+        }
+        
+        shuffleWords()
         wordList = ["good", "elephant", "take", "six", "what"]
         currWord = wordList.randomElement()!
         print(currWord)
 
-        // Do any additional setup after loading the view.
     }
     
     func removeWord(word: String) {
@@ -30,12 +38,16 @@ class ViewController: UIViewController {
     
     func shuffleWords() {
         wordList = ["good", "elephant", "take", "six", "what"]
-        for button in wordButtons {
-            let title = wordList.randomElement()
-            button.titleLabel?.text = title
-            removeWord(word: title)
+        wordList.shuffle()
+        for (button) in wordButtons {
+            button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 31)
+            if let title = wordList.popLast() {
+                button.setTitle(title, for: .normal)
+            }
         }
     }
+
     
     
     @IBOutlet var wordButtons: [UIButton]!
@@ -81,6 +93,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
+        shuffleWords()
         wordList = ["good", "elephant", "take", "six", "what"]
         currWord = wordList.randomElement()!
         print(currWord)
