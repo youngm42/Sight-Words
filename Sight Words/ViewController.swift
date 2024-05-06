@@ -6,12 +6,31 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     var wordList: [String] = []
     var currWord: String = ""
     var tokenCount = 0
+    
+    
+    class SoundPlayer {
+        var audioPlayer: AVAudioPlayer?
+
+        func playSound() {
+            if let path = Bundle.main.path(forResource: "good", ofType: "m4a") {
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                    audioPlayer?.play()
+                } catch {
+                    print("Error playing sound: \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+    
+    var player = SoundPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +39,10 @@ class ViewController: UIViewController {
             button.backgroundColor = UIColor.purple
             button.tintColor = UIColor.white
             button.layer.cornerRadius = 10
-            
         }
+        playButton.backgroundColor = UIColor.purple
+        playButton.tintColor = UIColor.white
+        playButton.layer.cornerRadius = 10
         
         shuffleWords()
         wordList = ["good", "elephant", "take", "six", "what"]
@@ -29,6 +50,8 @@ class ViewController: UIViewController {
         print(currWord)
 
     }
+    
+
     
     func removeWord(word: String) {
         if let index = wordList.firstIndex(of: word) {
@@ -52,7 +75,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var wordButtons: [UIButton]!
     
-
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var checkBox1: UIImageView!
     @IBOutlet weak var checkBox2: UIImageView!
     @IBOutlet weak var checkBox3: UIImageView!
@@ -105,5 +128,8 @@ class ViewController: UIViewController {
         checkBox5.image = UIImage(named: "pinkBorderedBox")
     }
     
+    @IBAction func playButton(_ sender: UIButton) {
+        player.playSound()
+    }
 }
 
