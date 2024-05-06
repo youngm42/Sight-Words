@@ -22,7 +22,23 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func removeWord(word: String) {
+        if let index = wordList.firstIndex(of: word) {
+            wordList.remove(at: index)
+        }
+    }
     
+    func shuffleWords() {
+        wordList = ["good", "elephant", "take", "six", "what"]
+        for button in wordButtons {
+            let title = wordList.randomElement()
+            button.titleLabel?.text = title
+            removeWord(word: title)
+        }
+    }
+    
+    
+    @IBOutlet var wordButtons: [UIButton]!
     
 
     @IBOutlet weak var checkBox1: UIImageView!
@@ -32,7 +48,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var checkBox5: UIImageView!
 
     @IBAction func wordButton(_ sender: UIButton) {
-        print(sender.titleLabel?.text!)
+        print(sender.titleLabel?.text ?? "No title")
         if sender.titleLabel?.text == self.currWord {
             print("That is correct!")
             tokenCount += 1
@@ -49,11 +65,32 @@ class ViewController: UIViewController {
                 checkBox5.image = UIImage(named: "pinkCheckedBox")
             default:
                 print("hooray!")
+            
             }
+            removeWord(word: currWord)
+            if !wordList.isEmpty {
+                currWord = wordList.randomElement()!
+                print("wordList = ", wordList)
+                print("currWord = ", currWord)
+            }
+            
         } else {
             // highlight correct answer and replay cue
             // have separate audio for prompted answer vs unprompted (i.e., dependent on whether a check is earned)?
         }
     }
+    
+    @IBAction func resetButton(_ sender: UIButton) {
+        wordList = ["good", "elephant", "take", "six", "what"]
+        currWord = wordList.randomElement()!
+        print(currWord)
+        tokenCount = 0
+        checkBox1.image = UIImage(named: "pinkBorderedBox")
+        checkBox2.image = UIImage(named: "pinkBorderedBox")
+        checkBox3.image = UIImage(named: "pinkBorderedBox")
+        checkBox4.image = UIImage(named: "pinkBorderedBox")
+        checkBox5.image = UIImage(named: "pinkBorderedBox")
+    }
+    
 }
 
