@@ -13,24 +13,8 @@ class ViewController: UIViewController {
     var wordList: [String] = []
     var currWord: String = ""
     var tokenCount = 0
-    
-    
-    class SoundPlayer {
-        var audioPlayer: AVAudioPlayer?
 
-        func playSound() {
-            if let path = Bundle.main.path(forResource: "good", ofType: "m4a") {
-                do {
-                    audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-                    audioPlayer?.play()
-                } catch {
-                    print("Error playing sound: \(error.localizedDescription)")
-                }
-            }
-        }
-    }
-    
-    var player = SoundPlayer()
+    var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +35,16 @@ class ViewController: UIViewController {
 
     }
     
+    func playSound(soundName: String) {
+        if let path = Bundle.main.path(forResource: soundName, ofType: "m4a") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayer?.play()
+            } catch {
+                print("Error playing sound: \(error.localizedDescription)")
+            }
+        }
+    }
 
     
     func removeWord(word: String) {
@@ -129,7 +123,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playButton(_ sender: UIButton) {
-        player.playSound()
+        playSound(soundName: currWord)
     }
 }
 
