@@ -21,6 +21,7 @@
 		4FB17B342BEAC52C002E6F16 /* ping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17B332BEAC52C002E6F16 /* ping.mp3 */; };
 		4FB17B382BEAC562002E6F16 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17B372BEAC562002E6F16 /* correct.wav */; };
 		4FB17B3A2BEAC8ED002E6F16 /* applause.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17B392BEAC8ED002E6F16 /* applause.wav */; };
+		4FB17B3C2BEACEB2002E6F16 /* low_key_Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17B3B2BEACEB2002E6F16 /* low_key_Correct.wav */; };
 		4FD15C9D2BE87B160025CAAB /* good.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FD15C9C2BE87B160025CAAB /* good.m4a */; };
 		4FD15C9F2BE87CF40025CAAB /* six.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FD15C9E2BE87CF30025CAAB /* six.m4a */; };
 		4FD15CA12BE87D100025CAAB /* what.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FD15CA02BE87D100025CAAB /* what.m4a */; };
@@ -45,6 +46,7 @@
 		4FB17B332BEAC52C002E6F16 /* ping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ping.mp3; sourceTree = "<group>"; };
 		4FB17B372BEAC562002E6F16 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		4FB17B392BEAC8ED002E6F16 /* applause.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = applause.wav; sourceTree = "<group>"; };
+		4FB17B3B2BEACEB2002E6F16 /* low_key_Correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = low_key_Correct.wav; sourceTree = "<group>"; };
 		4FD15C9C2BE87B160025CAAB /* good.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = good.m4a; sourceTree = "<group>"; };
 		4FD15C9E2BE87CF30025CAAB /* six.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = six.m4a; sourceTree = "<group>"; };
 		4FD15CA02BE87D100025CAAB /* what.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = what.m4a; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				4FB17B332BEAC52C002E6F16 /* ping.mp3 */,
 				4FB17B372BEAC562002E6F16 /* correct.wav */,
 				4FB17B392BEAC8ED002E6F16 /* applause.wav */,
+				4FB17B3B2BEACEB2002E6F16 /* low_key_Correct.wav */,
 			);
 			path = "Sight Words";
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				4FD15CA32BE87D1E0025CAAB /* elephant.m4a in Resources */,
 				4FB17B2C2BEAC2BB002E6F16 /* her.m4a in Resources */,
 				4FB17B3A2BEAC8ED002E6F16 /* applause.wav in Resources */,
+				4FB17B3C2BEACEB2002E6F16 /* low_key_Correct.wav in Resources */,
 				4F08FC182BE43F0E006EACB8 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

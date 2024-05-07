@@ -114,18 +114,11 @@ class ViewController: UIViewController {
                 if !wordList.isEmpty {
                     playSound(soundName: currWord)
                 }
-                    }
+            }
             
             if firstAttempt == true {
                 tokenCount += 1
                 playWav(soundName: "correct")
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
-//                    
-//                        }
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [self] in
-//                    // pause before next verbal direction
-//                        }
-                
                 removeWord(word: currWord)
             } else {
                 playPing()
