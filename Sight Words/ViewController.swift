@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     var wordList: [String] = []
     var currWord: String = ""
     var tokenCount = 0
+    var firstAttempt = true
+    let WORDLIST = ["zoo", "milk", "rabbit", "her", "jump"]
 
     var audioPlayer: AVAudioPlayer?
     
@@ -29,9 +31,10 @@ class ViewController: UIViewController {
         playButton.layer.cornerRadius = 10
         
         shuffleWords()
-        wordList = ["good", "elephant", "take", "six", "what"]
+        wordList = WORDLIST
         currWord = wordList.randomElement()!
         print(currWord)
+        playSound(soundName: currWord)
 
     }
     
@@ -47,6 +50,28 @@ class ViewController: UIViewController {
     }
 
     
+    func playPing() {
+        if let path = Bundle.main.path(forResource: "ping", ofType: "mp3") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayer?.play()
+            } catch {
+                print("Error playing sound: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func playWav(soundName: String) {
+        if let path = Bundle.main.path(forResource: soundName, ofType: "wav") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayer?.play()
+            } catch {
+                print("Error playing sound: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func removeWord(word: String) {
         if let index = wordList.firstIndex(of: word) {
             wordList.remove(at: index)
@@ -54,7 +79,7 @@ class ViewController: UIViewController {
     }
     
     func shuffleWords() {
-        wordList = ["good", "elephant", "take", "six", "what"]
+        wordList = WORDLIST
         wordList.shuffle()
         for (button) in wordButtons {
             button.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -80,7 +105,32 @@ class ViewController: UIViewController {
         print(sender.titleLabel?.text ?? "No title")
         if sender.titleLabel?.text == self.currWord {
             print("That is correct!")
-            tokenCount += 1
+            
+            
+            //TODO: Indicate to user that answer is correct - play sound, flash button color, outline button, animation?
+            sender.backgroundColor = UIColor.systemMint
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
+                sender.backgroundColor = UIColor.purple
+                if !wordList.isEmpty {
+                    playSound(soundName: currWord)
+                }
+                    }
+            
+            if firstAttempt == true {
+                tokenCount += 1
+                playWav(soundName: "correct")
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
+//                    
+//                        }
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [self] in
+//                    // pause before next verbal direction
+//                        }
+                
+                removeWord(word: currWord)
+            } else {
+                playPing()
+            }
+            
             switch tokenCount {
             case 1:
                 checkBox1.image = UIImage(named: "pinkCheckedBox")
@@ -92,18 +142,31 @@ class ViewController: UIViewController {
                 checkBox4.image = UIImage(named: "pinkCheckedBox")
             case 5:
                 checkBox5.image = UIImage(named: "pinkCheckedBox")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { [self] in
+                    playWav(soundName: "applause")
+                }
+                
             default:
-                print("hooray!")
+                print("hooray")
             
             }
-            removeWord(word: currWord)
+            
             if !wordList.isEmpty {
                 currWord = wordList.randomElement()!
                 print("wordList = ", wordList)
                 print("currWord = ", currWord)
             }
+            firstAttempt = true
             
         } else {
+            firstAttempt = false
+            sender.backgroundColor = UIColor.lightGray
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
+                sender.backgroundColor = UIColor.purple
+                playSound(soundName: currWord)
+                    }
+            
+            // TODO
             // highlight correct answer and replay cue
             // have separate audio for prompted answer vs unprompted (i.e., dependent on whether a check is earned)?
         }
@@ -111,7 +174,7 @@ class ViewController: UIViewController {
     
     @IBAction func resetButton(_ sender: UIButton) {
         shuffleWords()
-        wordList = ["good", "elephant", "take", "six", "what"]
+        wordList = WORDLIST
         currWord = wordList.randomElement()!
         print(currWord)
         tokenCount = 0
