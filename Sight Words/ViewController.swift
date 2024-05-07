@@ -89,6 +89,17 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func highlightCorrectButton(withTitle title: String) {
+        for button in wordButtons {
+            if let buttonTitle = button.titleLabel?.text, buttonTitle == currWord {
+                // Modify the background color of the correct button
+                button.backgroundColor = UIColor.green // Example color
+                break // Exit the loop once the correct button is found
+            }
+        }
+    }
+
 
     
     
@@ -156,6 +167,7 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.lightGray
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
                 sender.backgroundColor = UIColor.purple
+                highlightCorrectButton(withTitle: currWord)
                 playSound(soundName: currWord)
                     }
             
