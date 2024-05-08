@@ -9,12 +9,15 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     var wordList: [String] = []
     var currWord: String = ""
     var tokenCount = 0
     var firstAttempt = true
-    let WORDLIST = ["zoo", "milk", "rabbit", "her", "jump"]
+//    let WORDLIST = ["zoo", "milk", "rabbit", "her", "jump"]
+    let WORDLIST = ["good", "six", "what", "elephant", "take"]
+    
+    
 
     var audioPlayer: AVAudioPlayer?
     

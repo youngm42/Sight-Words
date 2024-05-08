@@ -134,7 +134,7 @@
     </scenes>
     <resources>
         <image name="pinkBorderedBox" width="300" height="300"/>
-        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="play.fill" catalog="system" width="32" height="32"/>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
