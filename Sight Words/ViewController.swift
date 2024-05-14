@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var tokenCount = 0
     var firstAttempt = true
 //    let WORDLIST = ["zoo", "milk", "rabbit", "her", "jump"]
-    let WORDLIST = ["good", "six", "what", "elephant", "take"]
+    var WORDLIST = ["good", "six", "what", "elephant", "take"]
     
     
     var robot = SpeechManager()

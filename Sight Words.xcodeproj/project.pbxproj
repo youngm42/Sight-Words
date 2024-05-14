@@ -74,7 +74,6 @@
 		4F08FC042BE43F0E006EACB8 = {
 			isa = PBXGroup;
 			children = (
-				4FAD7CC12BF4226A000EDF4B /* WordListViewController.swift */,
 				4F08FC0F2BE43F0E006EACB8 /* Sight Words */,
 				4F08FC0E2BE43F0E006EACB8 /* Products */,
 			);
@@ -94,6 +93,7 @@
 				4F08FC102BE43F0E006EACB8 /* AppDelegate.swift */,
 				4F08FC122BE43F0E006EACB8 /* SceneDelegate.swift */,
 				4F08FC142BE43F0E006EACB8 /* ViewController.swift */,
+				4FAD7CC12BF4226A000EDF4B /* WordListViewController.swift */,
 				4F314D2B2BF3EA170070E6F8 /* SpeechManager.swift */,
 				4F08FC162BE43F0E006EACB8 /* Main.storyboard */,
 				4F08FC192BE43F0F006EACB8 /* Assets.xcassets */,

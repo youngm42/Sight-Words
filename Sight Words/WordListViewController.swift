@@ -17,6 +17,14 @@ class WordListViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startTrialSegue" {
+            if let destinationVC = segue.destination as? ViewController {
+                destinationVC.WORDLIST = userWordList
+            }
+        }
+    }
+    
     @IBAction func textBox1(_ sender: UITextField) {
         userWordList[0] = sender.text ?? "empty"
         print("user word list = ", userWordList)

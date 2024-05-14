@@ -204,7 +204,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ZDt-NR-XkH"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="startTrialSegue" id="ZDt-NR-XkH"/>
                                 </connections>
                             </button>
                         </subviews>
