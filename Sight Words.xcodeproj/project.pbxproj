@@ -14,6 +14,7 @@
 		4F08FC1A2BE43F0F006EACB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F08FC192BE43F0F006EACB8 /* Assets.xcassets */; };
 		4F08FC1D2BE43F10006EACB8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4F08FC1C2BE43F10006EACB8 /* Base */; };
 		4F314D2C2BF3EA170070E6F8 /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F314D2B2BF3EA170070E6F8 /* SpeechManager.swift */; };
+		4FAD7CC22BF4226A000EDF4B /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD7CC12BF4226A000EDF4B /* WordListViewController.swift */; };
 		4FB17B2A2BEAC29E002E6F16 /* jump.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17B292BEAC29E002E6F16 /* jump.m4a */; };
 		4FB17B2C2BEAC2BB002E6F16 /* her.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17B2B2BEAC2BB002E6F16 /* her.m4a */; };
 		4FB17B2E2BEAC2D1002E6F16 /* rabbit.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FB17B2D2BEAC2D1002E6F16 /* rabbit.m4a */; };
@@ -41,6 +42,7 @@
 		4F08FC1C2BE43F10006EACB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F08FC1E2BE43F10006EACB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F314D2B2BF3EA170070E6F8 /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
+		4FAD7CC12BF4226A000EDF4B /* WordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
 		4FB17B292BEAC29E002E6F16 /* jump.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = jump.m4a; sourceTree = "<group>"; };
 		4FB17B2B2BEAC2BB002E6F16 /* her.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = her.m4a; sourceTree = "<group>"; };
 		4FB17B2D2BEAC2D1002E6F16 /* rabbit.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = rabbit.m4a; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		4F08FC042BE43F0E006EACB8 = {
 			isa = PBXGroup;
 			children = (
+				4FAD7CC12BF4226A000EDF4B /* WordListViewController.swift */,
 				4F08FC0F2BE43F0E006EACB8 /* Sight Words */,
 				4F08FC0E2BE43F0E006EACB8 /* Products */,
 			);
@@ -203,6 +206,7 @@
 			files = (
 				4F08FC152BE43F0E006EACB8 /* ViewController.swift in Sources */,
 				4F314D2C2BF3EA170070E6F8 /* SpeechManager.swift in Sources */,
+				4FAD7CC22BF4226A000EDF4B /* WordListViewController.swift in Sources */,
 				4F08FC112BE43F0E006EACB8 /* AppDelegate.swift in Sources */,
 				4F08FC132BE43F0E006EACB8 /* SceneDelegate.swift in Sources */,
 			);

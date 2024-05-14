@@ -14,7 +14,8 @@ class SpeechManager {
     func speak(_ text: String) {
         // Configure speech utterance
         let speechUtterance = AVSpeechUtterance(string: text)
-        speechUtterance.rate = AVSpeechUtteranceDefaultSpeechRate // Adjust the speech rate
+        //speechUtterance.rate = AVSpeechUtteranceDefaultSpeechRate // Adjust the speech rate
+        speechUtterance.rate = 0.4
         speechUtterance.volume = 1.0 // Adjust the speech volume (0.0 to 1.0)
         speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US") // Specify the language
 
@@ -22,3 +23,5 @@ class SpeechManager {
         speechSynthesizer.speak(speechUtterance)
     }
 }
+
+

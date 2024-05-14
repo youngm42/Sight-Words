@@ -7,7 +7,6 @@
 
 import UIKit
 import AVFoundation
-import SpeechManager
 
 
 class ViewController: UIViewController {
@@ -20,7 +19,7 @@ class ViewController: UIViewController {
     let WORDLIST = ["good", "six", "what", "elephant", "take"]
     
     
-//  var robot: SpeechManager?
+    var robot = SpeechManager()
     var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
@@ -39,8 +38,8 @@ class ViewController: UIViewController {
         wordList = WORDLIST
         currWord = wordList.randomElement()!
         print(currWord)
-        playSound(soundName: currWord)
-        //robot.speak(text: currWord)
+        //playSound(soundName: currWord)
+        robot.speak("touch " + currWord)
 
     }
     
@@ -129,8 +128,8 @@ class ViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
                 sender.backgroundColor = UIColor.purple
                 if !wordList.isEmpty {
-                    playSound(soundName: currWord)
-                    //robot.speak(text: currWord)
+                    //playSound(soundName: currWord)
+                    robot.speak("touch " + currWord)
                 }
             }
             
@@ -175,7 +174,8 @@ class ViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
                 sender.backgroundColor = UIColor.purple
                 highlightCorrectButton(withTitle: currWord)
-                playSound(soundName: currWord)
+                //playSound(soundName: currWord)
+                robot.speak("touch " + currWord)
                     }
             
             // TODO
@@ -198,7 +198,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playButton(_ sender: UIButton) {
-        playSound(soundName: currWord)
+        //playSound(soundName: currWord)
+        robot.speak("touch " + currWord)
     }
 }
 
