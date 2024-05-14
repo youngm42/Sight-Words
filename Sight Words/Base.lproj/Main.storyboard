@@ -101,19 +101,22 @@
                                 <rect key="frame" x="804" y="69" width="105" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMQ-UT-W9o">
-                                <rect key="frame" x="837" y="26" width="72" height="35"/>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="o07-D4-TXl">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Zh7-Yv-Ugr">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gMQ-UT-W9o">
+                                <rect key="frame" x="932" y="0.0" width="72" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <buttonConfiguration key="configuration" style="plain" title=" Reset"/>
                                 <connections>
                                     <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Efo-Bp-YGG"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="o07-D4-TXl"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="checkBox1" destination="anM-gZ-LDJ" id="x59-gw-MZX"/>
                         <outlet property="checkBox2" destination="H5C-LQ-AII" id="FHj-CN-k8t"/>
