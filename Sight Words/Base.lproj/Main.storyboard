@@ -107,8 +107,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="o07-D4-TXl">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Zh7-Yv-Ugr">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gMQ-UT-W9o">
-                                <rect key="frame" x="932" y="0.0" width="72" height="44"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gMQ-UT-W9o">
+                                <rect key="frame" x="932" y="3" width="72" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <buttonConfiguration key="configuration" style="plain" title=" Reset"/>
                                 <connections>
@@ -144,10 +144,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="VzP-ZC-MOR">
-                                <rect key="frame" x="50" y="120" width="924" height="222"/>
+                                <rect key="frame" x="50" y="120" width="924" height="259"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word List:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whs-Zf-Jxs">
+                                        <rect key="frame" x="0.0" y="0.0" width="924" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type word here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wL6-Jk-KdE">
-                                        <rect key="frame" x="0.0" y="0.0" width="924" height="34"/>
+                                        <rect key="frame" x="0.0" y="37" width="924" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -155,7 +161,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type word here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5O-6x-OGW">
-                                        <rect key="frame" x="0.0" y="47" width="924" height="34"/>
+                                        <rect key="frame" x="0.0" y="84" width="924" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -163,7 +169,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type word here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLx-Rp-MyB">
-                                        <rect key="frame" x="0.0" y="94" width="924" height="34"/>
+                                        <rect key="frame" x="0.0" y="131" width="924" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -171,7 +177,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type word here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0U-S3-uSJ">
-                                        <rect key="frame" x="0.0" y="141" width="924" height="34"/>
+                                        <rect key="frame" x="0.0" y="178" width="924" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -179,7 +185,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type word here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fie-nf-1AS">
-                                        <rect key="frame" x="0.0" y="188" width="924" height="34"/>
+                                        <rect key="frame" x="0.0" y="225" width="924" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -190,17 +196,13 @@
                                 <constraints>
                                     <constraint firstItem="wL6-Jk-KdE" firstAttribute="centerX" secondItem="VzP-ZC-MOR" secondAttribute="centerX" id="1o7-sS-I3z"/>
                                     <constraint firstItem="h0U-S3-uSJ" firstAttribute="centerX" secondItem="VzP-ZC-MOR" secondAttribute="centerX" id="288-IU-KRR"/>
+                                    <constraint firstItem="whs-Zf-Jxs" firstAttribute="centerX" secondItem="VzP-ZC-MOR" secondAttribute="centerX" id="3QR-jk-uvB"/>
                                     <constraint firstItem="KLx-Rp-MyB" firstAttribute="centerX" secondItem="VzP-ZC-MOR" secondAttribute="centerX" id="9Ut-WE-MAB"/>
+                                    <constraint firstItem="whs-Zf-Jxs" firstAttribute="centerX" secondItem="VzP-ZC-MOR" secondAttribute="centerX" id="Abd-1M-Dzt"/>
                                     <constraint firstItem="fie-nf-1AS" firstAttribute="centerX" secondItem="VzP-ZC-MOR" secondAttribute="centerX" id="BH0-VP-UWb"/>
                                     <constraint firstItem="z5O-6x-OGW" firstAttribute="centerX" secondItem="VzP-ZC-MOR" secondAttribute="centerX" id="Yuo-gY-sQa"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Word List:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whs-Zf-Jxs">
-                                <rect key="frame" x="468" y="26" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDN-bX-jjr">
                                 <rect key="frame" x="488" y="666" width="62" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -214,7 +216,6 @@
                         <viewLayoutGuide key="safeArea" id="lrD-vP-weK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="whs-Zf-Jxs" firstAttribute="centerX" secondItem="HGQ-WT-o4N" secondAttribute="centerX" id="1K5-Dg-w3p"/>
                             <constraint firstItem="VzP-ZC-MOR" firstAttribute="leading" secondItem="lrD-vP-weK" secondAttribute="leading" constant="50" id="GVu-0H-hcR"/>
                             <constraint firstItem="lrD-vP-weK" firstAttribute="trailing" secondItem="VzP-ZC-MOR" secondAttribute="trailing" constant="50" id="bIX-KJ-uoY"/>
                             <constraint firstItem="VzP-ZC-MOR" firstAttribute="top" secondItem="lrD-vP-weK" secondAttribute="top" constant="50" id="lmo-nw-2mn"/>
