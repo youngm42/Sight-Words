@@ -7,6 +7,8 @@
 
 import UIKit
 import AVFoundation
+import SpeechManager
+
 
 class ViewController: UIViewController {
     
@@ -18,7 +20,7 @@ class ViewController: UIViewController {
     let WORDLIST = ["good", "six", "what", "elephant", "take"]
     
     
-
+//  var robot: SpeechManager?
     var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
         currWord = wordList.randomElement()!
         print(currWord)
         playSound(soundName: currWord)
+        //robot.speak(text: currWord)
 
     }
     
@@ -127,6 +130,7 @@ class ViewController: UIViewController {
                 sender.backgroundColor = UIColor.purple
                 if !wordList.isEmpty {
                     playSound(soundName: currWord)
+                    //robot.speak(text: currWord)
                 }
             }
             
